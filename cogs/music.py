@@ -68,8 +68,8 @@ class Music(commands.Cog):
             voice_channel = ctx.author.voice.channel
         except:
             await ctx.send("Connect to a voice channel gaandu bsdk!")
-        # if voice_channel is None:
-        #     await ctx.send("Connect to a voice channel gaandu bsdk!")
+        if voice_channel is None:
+            await ctx.send("Connect to a voice channel gaandu bsdk!")
         else:
             song = self.search_yt(query)
             if type(song) == type(True):
