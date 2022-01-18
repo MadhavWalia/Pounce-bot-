@@ -57,7 +57,7 @@ class Music(commands.Cog):
 
             self.music_queue.pop(0)
 
-            self.vc.play(discord.FFmpegPCMAudio(music_url, **self.FFMPEG_OPTIONS), after = lambda e: self.play_next())
+            self.vc.play(discord.FFmpegPCMAudio( music_url, **self.FFMPEG_OPTIONS), executable="C:\FFmpeg\bin\ffmpeg.exe",after = lambda e: self.play_next())
         else:
             self.isPlaying = False
 
