@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pounce-bot",
+  "private_key_id": "26b75ac43e2b6587a98aa726a5a3aba8a6607671",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCuolIrqPhezIkY\nBPuFY/YRruYt/tYVQd8fhmoPybCcwNd7BO4Xiimo735cVY+gdjCNH9OmK05zu0kY\nO0bTuK+AVFMfnNGax/5Yg59lp/AV/kwpMc+B6Ea3DJgCWsDByS9zrMuEHZKdtmoq\nTUdf1qeaktvwRFRq1lgM6hw+WBSTBpezimDRjB1JcmmhoqxUGBYh2V89/rjoCUDR\nLw6DH0MkHA6Hma2HUpWsl3wkNkwur2TiAytvNA9XcMlvAdQeV0tqGPBBR1snCuG/\nt8h7fr+Djrs7fWhDRhCp7fal1wK3/mkVEpPrVSerxKvmjmJRaAn6ebMUXDNPqk0m\nzDQIvTuPAgMBAAECggEAN95hSGt9ziJEZ8VMTF/u/LhGFof1KIbS4YyIiPV/BZ8i\nMM6idzBx5IR+Gf8bfHvjS3rXpM0tA5RyrYhlP93Rc85Ga5IpcomyAtJVH9oK0pZw\n+irf1pEfcndaeEJdcYGyJyEsWN93JPKTY2Ymw+/x3d9G8saBdU6Oi88n6wAV0PUf\nBrc4ZZRKkmxd1Xd7ASHpO1B5Ktb6FvWcpceFAHU47ePMzx6/EWF/ix8t/8IiIcHK\n4LHvGBqz6AlstkMIaqL0lKnLs3SV6WjCdvxFkFXZ68l/J9qd6dQOsaHSqnt3gHlY\nY/o/UqXjSBSLUDpf+o4JMTg+RoPL0j3xBVPVYZ8tOQKBgQDeE7s4fx71FEzX0s0r\n0BFkG1llLlBZqMI80hiaFPe89UqJZIr1U/MgUB700YwgcJWEKfDdTDR0v1Czd9/D\nEfBl1FwYKQs3SA+w1if7Jvfonj4OqMHOsuWfy4XKyk1dDhANaG4tAmqIUFypFsOH\nwLQ/cCSTVMlI3bAOVksEGhetSQKBgQDJT1e0xojfLvBRnbviyUHztMIDukuQWaxA\nzadXPh+xXj01nU8ZrvLzEsyhGVAeITwQZJgnP17qJsB6lEc+ZOa4XSiDXeITNFnj\nC+Y6yPY9a8pb9XJsHoNeAIiVyZNBrV0r02OIbvw+CCrEZB3awV76UiYx80H7734d\nowGKtSlaFwKBgFJVDF8Yufhwi0CklY49uITdotnhPsbOyxxTY+2UAnjak8S2MtJb\nSlLbgW6QVZwdQUFbb0IMI5J470lqEto2R2LpRS9r4A2huLd93hq9ysFCEY3LwPaJ\n2pnQkYyqTd5G/WqLIfWr5KUe7gt+NgWZSvoN8HFyyKEsFz5pfaxKpCaJAoGAVUIR\nNzLOTReoGCjhpg7uq7RmZwXDcwNHfLqcoMpiyc/LxKU3Fv2NT30qxR/fWqNguOCh\nwB2KqUh4RHIAKmC5hmOOAPUGBnQpjYtAmqz5/NFmBsRRDZFuuaUoM6gHgc1WpHUG\ntoWqturmkf6E1l0HSKT6IDWSQI0RsKOUx5YqSUkCgYAGuLLXjtDPaiNlhnEuTsk5\nXU9ORnEuIcmgyUaM4riEw54I1DxqwaZDDxn2hCplOO/9drVmGXrMEPki3vIqFMWH\nQ67VvYSrm27bI1bCFyiVydQWqcuy7Lv6hUdPm+9oSON+hZW8+/Bll5Z7IYatzrWP\nDm4/3E8d06LDVXDj3EAY9Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "pounce-bot@pounce-bot.iam.gserviceaccount.com",
+  "client_id": "109907384000417044195",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pounce-bot%40pounce-bot.iam.gserviceaccount.com"
+}
