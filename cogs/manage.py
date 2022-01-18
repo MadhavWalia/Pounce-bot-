@@ -2,11 +2,12 @@ import discord
 import os
 import asyncio
 from discord.ext import commands
+from discord.ext.commands.core import command
 from discord.utils import get
 
 colors = ["caf0f8","94d2bd","f77f00","ffadad","fdffb6","caffbf","a0c4ff","bdb2ff","ffc6ff","fffffc","006d77","d9ed92"]
 
-class Make(commands.Cog):
+class Manage(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -51,6 +52,24 @@ class Make(commands.Cog):
                                                         ctx.guild.me: discord.PermissionOverwrite(read_messages=True, send_messages=True) 
                                                     },
                                                     category = cat2)
+    
+
+    @commands.command(name="deleteChannels")
+    @commands.has_permissions(manage_roles = True)
+    async def delete_Channels(self,ctx):
+        for i in range(1,13): 
+            channel_object = discord.utils.get(ctx.guild.channels, name=f"team-{str(i)}")
+            if channel_object is not None:
+                await channel_object.delete()
+
+
+    @commands.command(name="deleteVoice")
+    @commands.has_permissions(manage_roles = True)
+    async def delete_VChannels(self,ctx):
+        for i in range(1,13): 
+            channel_object = discord.utils.get(ctx.guild.voice_channels, name=f"Team {str(i)}")
+            if channel_object is not None:
+                await channel_object.delete()
 
 def setup(client):
-    client.add_cog(Make(client))
+    client.add_cog(Manage(client))
