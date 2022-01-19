@@ -12,6 +12,7 @@ class ManageRoles(commands.Cog):
 
 
     @commands.command(name="give")
+    @commands.has_role('QM')
     async def giverole(self,ctx, teamNum: str ,members: commands.Greedy[discord.Member]):
         knownrole = discord.utils.get(ctx.guild.roles, name=teamNum)
         for member in members:
@@ -24,7 +25,7 @@ class ManageRoles(commands.Cog):
     async def mute(self,ctx, teamNum: str, users: commands.Greedy[discord.Member]):
         role = discord.utils.get(ctx.guild.roles, name=teamNum)
         for user in users:
-            if user.has_role(role):
+            if role in user.roles:
                 await user.remove_roles(role)
                 await ctx.send(f'{user.name} has been removed from role {teamNum}')
             else :
