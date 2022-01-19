@@ -24,7 +24,7 @@ class ManageRoles(commands.Cog):
     async def mute(self,ctx, teamNum: str, users: commands.Greedy[discord.Member]):
         role = discord.utils.get(ctx.guild.roles, name=teamNum)
         for user in users:
-            if user.has_role(role):
+            if user.has_role(role): #this line has error so maybe store are role ids in an array and do it then
                 await user.remove_roles(role)
                 await ctx.send(f'{user.name} has been removed from role {teamNum}')
             else :
