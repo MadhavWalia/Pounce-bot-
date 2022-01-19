@@ -57,7 +57,7 @@ class Music(commands.Cog):
 
             self.music_queue.pop(0)
 
-            self.vc.play(discord.FFmpegPCMAudio( music_url, **self.FFMPEG_OPTIONS), executable="C:\FFmpeg\bin\ffmpeg.exe",after = lambda e: self.play_next())
+            self.vc.play(discord.FFmpegPCMAudio( music_url, **self.FFMPEG_OPTIONS),after = lambda e: self.play_next())
         else:
             self.isPlaying = False
 
@@ -67,9 +67,9 @@ class Music(commands.Cog):
         try:
             voice_channel = ctx.author.voice.channel
         except:
-            await ctx.send("Connect to a voice channel gaandu bsdk!")
+            await ctx.send("Connect to a voice channel")
         if voice_channel is None:
-            await ctx.send("Connect to a voice channel gaandu bsdk!")
+            await ctx.send("Connect to a voice channel ")
         else:
             song = self.search_yt(query)
             if type(song) == type(True):
@@ -101,6 +101,13 @@ class Music(commands.Cog):
             self.vc.stop()
             await self.play_music()
 
+    @commands.command(name="leave")
+    async def leave(self,ctx):
+        try :
+            server = ctx.message.guild.voice_client
+            await server.disconnect()
+        except AttributeError:
+            await ctx.send("Not in a voice channel ")
     
 def setup(client):
     client.add_cog(Music(client))
