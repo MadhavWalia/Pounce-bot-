@@ -22,6 +22,7 @@ class Manage(commands.Cog):
             perms = {'read_messages': True,'send_messages': True}
             cat = discord.utils.get(ctx.guild.categories, name = "Text Channels")
             cat2 = discord.utils.get(ctx.guild.categories, name = "Voice Channels")
+            # if that category name does not exist then we need to create a new category name with the text channels name
 
             if get(ctx.guild.roles, name="QM"):
                 await ctx.send("Role QM already exists")
@@ -34,7 +35,7 @@ class Manage(commands.Cog):
                 else:
                     await ctx.guild.create_role(name = str(i), color = int(colors[i-1], 16),hoist = True)
 
-            for i in range (1,number+1):
+            for i in range (1,number+1): #need to check if the channel name already exists 
                 teamRole = discord.utils.get(ctx.guild.roles,name=str(i))
 
                 await ctx.guild.create_text_channel(f"Team {i}",
@@ -52,6 +53,10 @@ class Manage(commands.Cog):
                                                         ctx.guild.me: discord.PermissionOverwrite(read_messages=True, send_messages=True) 
                                                     },
                                                     category = cat2)
+            await ctx.guild.create_text_channel(f"Announcements",overwrites = {QMRole:discord.PermissionOverwrite(**perms),
+                                                                            ctx.guild.default_role: discord.PermissionOverwrite(read_messages=True),
+                                                                            ctx.guild.me: discord.PermissionOverwrite(read_messages=True, send_messages=False)},
+                                                                            category = cat)
     
 
     @commands.command(name="deleteChannels")
@@ -61,6 +66,7 @@ class Manage(commands.Cog):
             channel_object = discord.utils.get(ctx.guild.channels, name=f"team-{str(i)}")
             if channel_object is not None:
                 await channel_object.delete()
+
 
 
     @commands.command(name="deleteVoice")
