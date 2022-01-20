@@ -108,6 +108,24 @@ class Music(commands.Cog):
             await server.disconnect()
         except AttributeError:
             await ctx.send("Not in a voice channel ")
+
+    
+    @commands.command(name="pause")
+    async def pause(self,ctx):
+        voiceClient = ctx.message.guild.voice_client
+        if voiceClient.is_playing():
+            await voiceClient.pause()
+        else:
+            await ctx.send("The bot is not playing anything at the moment")
+
+    
+    @commands.command(name="resume")
+    async def resume(self,ctx):
+        voiceClient = ctx.message.guild.voice_client
+        if voiceClient.is_paused():
+            await voiceClient.resume()
+        else:
+            await ctx.send("The bot was not playing anything before this command, use play")
     
 def setup(client):
     client.add_cog(Music(client))
