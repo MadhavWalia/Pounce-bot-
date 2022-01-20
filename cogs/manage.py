@@ -21,8 +21,13 @@ class Manage(commands.Cog):
             QMRole = discord.utils.get(ctx.guild.roles,name="QM")
             perms = {'read_messages': True,'send_messages': True}
             cat = discord.utils.get(ctx.guild.categories, name = "Text Channels")
+            if cat is None:
+                await ctx.guild.create_category("Text Channels")
+                cat = discord.utils.get(ctx.guild.categories, name = "Text Channels")
             cat2 = discord.utils.get(ctx.guild.categories, name = "Voice Channels")
-            # if that category name does not exist then we need to create a new category name with the text channels name
+            if cat2 is None:
+                await ctx.guild.create_category("Voice Channels")
+                cat2 = discord.utils.get(ctx.guild.categories, name = "Voice Channels")
 
             if get(ctx.guild.roles, name="QM"):
                 await ctx.send("Role QM already exists")
