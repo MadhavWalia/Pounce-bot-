@@ -8,7 +8,7 @@ The features: </br>
 -Playing music from spotify/YouTube </br>
 
 ### Tech Stack:
-The bot has been made using discord.py and uses API integrations.
+The bot has been made using discord.py and uses Mongo DB and Google Sheets API and Reddit API.
 
 ### Commands 
 ---
